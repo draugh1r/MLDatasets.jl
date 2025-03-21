@@ -74,6 +74,10 @@ include("datasets/misc/titanic.jl")
 export Titanic
 include("datasets/misc/wine.jl")
 export Wine
+# test GSOC dataset
+include("datasets/misc/test_water_consume.jl")
+export Test_Water_Consume
+# end test GSOC dataset
 
 ## Vision
 
