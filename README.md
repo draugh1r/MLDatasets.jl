@@ -1,7 +1,25 @@
-![image](https://github.com/user-attachments/assets/3982a7f4-0dc9-4d20-8aa2-51088be80d16)
+# GSOC Water Consume Dataset Wrapper for MLDatasets
+This fork repo contains a Julia module that automatically downloads, extracts, and loads the global water consumption dataset from Kaggle for use with MLDatasets.<br>
+The module uses DataDeps to manage the dataset dependency, a custom extraction function based on ZipFile.Reader to unzip the downloaded archive, and CSV.jl with DataFrames.jl to load the CSV data into a DataFrame. <br>
+## Installation
+1. Clone the repository,
+2. Activate the project environment by running <code>Pkg.activate("path/to/MLDatasets")</code> in Julia,
+3. Instantiate the environment using <code>Pkg.instantiate()</code>,
+4. Ensure that all dependencies are installed by running <code>Pkg.add("ZipFile")</code> if needed.
+## Usage
+In a Julia session run:
+<code>using MLDatasets, MLDatasets.Test_Water_Consume
+df = MLDatasets.Test_Water_Consume.load_data()</code> <br>
+This will download, extract, and load the dataset into a DataFrame.
 
+![image](https://github.com/user-attachments/assets/3982a7f4-0dc9-4d20-8aa2-51088be80d16) <br>
 
+## Requirements
+- Julia 1.11+ <br>
+- DataDeps, CSV, DataFrames, ZipFile <br>
 
+License <br>
+MIT License
 
 
 # MLDatasets.jl
